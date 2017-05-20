@@ -105,3 +105,22 @@ endShape(CLOSE);
 
 draw()
 ```
+
+Here's an animating example, but it's unsatisfactory in Jupyter because it pauses the interface and may not scroll properly. 
+
+```python
+from IPython import display
+import time
+from qdGraphics import *
+
+x = 0
+
+for i in range(100):
+    clear()
+    size(300, 300)
+    ellipse(30+x, 30, 30, 30)
+    x = x + 1
+    display.clear_output(wait=True)
+    display.display(draw())
+    time.sleep(0.01)
+```
