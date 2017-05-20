@@ -52,6 +52,8 @@ TODO
 # Example code: 
 
 ```python
+from qdGraphics import *
+
 clear()
 size(300,300)
 
